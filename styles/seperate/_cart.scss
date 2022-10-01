@@ -1,0 +1,100 @@
+@use '../config' as c;
+.cart {
+    background-color: white;
+    z-index: 9;
+    position: absolute;
+    width: 95vw;
+    top: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+ @include c.desktop {
+        width: 25vw;
+        transform: translateX(0);
+        box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.1);
+        left: auto;
+        right: 5vw;
+        top: 75px;
+        z-index: 10;
+    }
+
+    &--title {
+        padding: 1.5rem;
+        border-bottom: 1px solid c.$Grayish-blue;
+@include c.desktop {
+            font-size: 1rem;
+            padding: 1rem;
+        }
+    }
+
+    &--content {
+        min-height: 30vh;
+        height: max-content;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1rem;
+        align-content: center;
+
+        @include c.desktop {
+            padding: 1rem;
+        }
+    }
+
+    &--item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+ @include c.desktop {
+            font-size: 0.75rem;
+        }
+}
+
+    &--info {
+color: c.$Dark-grayish-blue;
+font-size: 0.75rem;
+max-width: 70%;
+    }
+&--name {
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+    }
+
+    &--total {
+        font-weight: 700;
+    }
+
+    &--thumbnail {
+        height: 70px;
+        width: 70px;
+        border-radius: 10px;
+
+        img {
+            border-radius: 10px;
+        }
+
+        @include c.desktop {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &--checkOut {
+        width: 100%;
+        padding-block: 1rem;
+        border-radius: 10px;
+        color: white;
+        background-color: c.$Orange;
+        font-size: 1rem;
+        font-weight: 700;
+}
+
+    &--delete {
+        background-color: transparent;
+        transform: scale(1.2);
+        &:hover{
+            transform: scale(1.4);
+        }
+    }
+}
