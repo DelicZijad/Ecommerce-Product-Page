@@ -354,7 +354,7 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 5rem;
     width: 75%;
-    margin-top: 4rem;
+    margin-top: 2rem;
   }
 }
 .product--images {
